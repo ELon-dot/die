@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Dark Theme</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #1f1f1f;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff6f61;
+            text-transform: uppercase;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #e0e0e0;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff6f61;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #1e1e1e, #282828);
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .particles div {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ff6f61;
+            border-radius: 50%;
+            animation: float 5s infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) translateX(0);
+                opacity: 0.8;
+            }
+            50% {
+                opacity: 0.4;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(calc(-50vw + 100px));
+                opacity: 0;
+            }
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: #ff6f61;
+            margin-bottom: 20px;
+            z-index: 1;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            max-width: 600px;
+            margin-bottom: 40px;
+            z-index: 1;
+        }
+
+        .hero button {
+            background-color: #ff6f61;
+            color: #121212;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            z-index: 1;
+        }
+
+        .hero button:hover {
+            background-color: #e05a50;
+        }
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+        }
+
+        .feature {
+            background: #1f1f1f;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature h3 {
+            font-size: 1.5rem;
+            color: #ff6f61;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        footer {
+            background: #1f1f1f;
+            color: #888;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #ff6f61;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">DarkSite</div>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div class="particles">
+            <div style="top: 10%; left: 20%; animation-duration: 6s;"></div>
+            <div style="top: 20%; left: 50%; animation-duration: 8s;"></div>
+            <div style="top: 30%; left: 70%; animation-duration: 10s;"></div>
+            <div style="top: 40%; left: 30%; animation-duration: 12s;"></div>
+            <div style="top: 50%; left: 80%; animation-duration: 7s;"></div>
+        </div>
+        <h1>Welcome to DarkSite</h1>
+        <p>Your gateway to a sleek, modern, and intuitive experience. Designed for innovators and dreamers.</p>
+        <button>Get Started</button>
+    </div>
+
+    <section id="features">
+        <h2>Features</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>Speed</h3>
+                <p>Experience lightning-fast load times with optimized performance.</p>
+            </div>
+            <div class="feature">
+                <h3>Design</h3>
+                <p>Enjoy a minimalist and elegant design that emphasizes usability.</p>
+            </div>
+            <div class="feature">
+                <h3>Support</h3>
+                <p>Our 24/7 support team is here to assist you at every step.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are passionate about creating beautiful and functional digital experiences that inspire and empower users worldwide.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 DarkSite. All rights reserved. | <a href="#privacy">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
